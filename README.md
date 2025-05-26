@@ -74,17 +74,17 @@ Avaliação:
 ________________________________________
 4️ Interpretação de Modelo
 •	Análise de interpretabilidade com SHAP:
-o	Identificação das variáveis que mais impactam na decisão do modelo.
-o	Gráfico de summary dos shap values.
+  o	Identificação das variáveis que mais impactam na decisão do modelo.
+  o	Gráfico de summary dos shap values.
 
 
 ________________________________________
 5️ Simulação de API
 •	Recebe dados no formato JSON simulando uma API.
 •	Realiza:
-o	Pré-processamento via pipeline salvo.
-o	Predição da classe (fraude ou não).
-o	Probabilidade de fraude.
+  o	Pré-processamento via pipeline salvo.
+  o	Predição da classe (fraude ou não).
+  o	Probabilidade de fraude.
 •	Retorna resposta em JSON.
 
 ________________________________________
@@ -104,11 +104,11 @@ ________________________________________
 
 •	Atingiu métricas robustas de avaliação:
 
-     o	AUC-ROC superior a 0,95, garantindo excelente capacidade de distinguir transações legítimas de fraudulentas.
+   o	AUC-ROC superior a 0,95, garantindo excelente capacidade de distinguir transações legítimas de fraudulentas.
 
-     o	Recall elevado (acima de 92%), priorizando a captura de fraudes — métrica essencial para cenários críticos de risco.
+   o	Recall elevado (acima de 92%), priorizando a captura de fraudes — métrica essencial para cenários críticos de risco.
 
-     o	Trade-off otimizado entre precisão e recall, controlando o impacto de falsos positivos e falsos negativos, alinhado com as boas práticas de Prevenção a Fraudes.
+   o	Trade-off otimizado entre precisão e recall, controlando o impacto de falsos positivos e falsos negativos, alinhado com as boas práticas de Prevenção a Fraudes.
 
 🔍 Interpretação Clara dos Principais Fatores de Risco
 
@@ -116,13 +116,13 @@ ________________________________________
 
 •	Identificação dos principais padrões associados a comportamento fraudulento, como:
 
-    o	Transações com valores anômalos fora do perfil médio do cliente.
+   o	Transações com valores anômalos fora do perfil médio do cliente.
 
-    o	Alta frequência de transações em curto espaço de tempo.
+   o	Alta frequência de transações em curto espaço de tempo.
 
-    o	Alterações recentes em dados cadastrais (indicador relevante para golpes como SIM Swap e roubo de identidade).
+   o	Alterações recentes em dados cadastrais (indicador relevante para golpes como SIM Swap e roubo de identidade).
 
-    o	Origem e destino de PIX com histórico suspeito.
+   o	Origem e destino de PIX com histórico suspeito.
 
 •	Geração de dashboards com visualização dos principais fatores de risco, permitindo que equipes de prevenção e compliance tomem decisões informadas, rápidas e eficientes.
 
@@ -132,9 +132,9 @@ ________________________________________
 
 •	Estrutura do projeto construída seguindo padrões profissionais de Engenharia de Dados e MLOps:
 
-o	Separação dos módulos (src/, models/, notebooks/, data/, outputs/).
+   o	Separação dos módulos (src/, models/, notebooks/, data/, outputs/).
 
-o	Preparado para ser integrado a um backend via API Flask, FastAPI ou serviços em nuvem como AWS, Google Cloud ou Azure.
+   o	Preparado para ser integrado a um backend via API Flask, FastAPI ou serviços em nuvem como AWS, Google Cloud ou Azure.
 
 •	O modelo está apto a ser incorporado em fluxos de decisão automática ou semiautomática, reduzindo significativamente o tempo de resposta na análise de risco em transações digitais.
 

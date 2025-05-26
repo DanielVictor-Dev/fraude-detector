@@ -135,86 +135,59 @@ matplotlib, seaborn
 🔍 Interpretação clara dos principais fatores de risco
 🚀 Pronto para ser integrado como protótipo de API
 
-📌 Exemplo de Resposta da API
-json
-Copiar
-Editar
-{
-  "fraude": true,
-  "probabilidade_fraude": 0.912
-}
-🚀 Como Executar
-Clone o repositório:
 
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/detecao-fraudes-bancarias.git
-cd detecao-fraudes-bancarias
-Crie e ative um ambiente virtual:
-
-bash
-Copiar
-Editar
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-Instale as dependências:
-
-bash
-Copiar
-Editar
-pip install -r requirements.txt
-Execute o script principal:
-
-bash
-Copiar
-Editar
-python src/pipeline_modelagem.py
 
 📜 Licença
 Este projeto é de código aberto para fins educacionais e demonstração. Sinta-se livre para utilizar, estudar e adaptar, dando os devidos créditos.
 
 💻 Como Executar Localmente
+
 1️⃣ Clone o repositório:
+
 bash
 Copiar
 Editar
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
+
 2️⃣ Crie um ambiente virtual:
+
 bash
 Copiar
 Editar
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
+
 3️⃣ Instale as dependências:
+
 bash
 Copiar
 Editar
 pip install -r requirements.txt
-4️⃣ Execute os scripts:
-Simular dados e treinar modelo:
 
+4️⃣ Execute os scripts:
+
+Simular dados e treinar modelo:
 bash
 Copiar
 Editar
 python simulacao_pipeline.py
-Simular predição via API:
 
+
+Simular predição via API:
 bash
 Copiar
 Editar
 python simulacao_api.py
 
+
 📜 Licença
 Este projeto é de código aberto para fins educacionais e demonstração. Sinta-se livre para utilizar, estudar e adaptar, dando os devidos créditos.
 
-🧠 Autor
-Desenvolvido por DANIEL VICTOR SIMÕES NEVES  — Apaixonado por Ciência de Dados, Machine Learning e Prevenção de Fraudes.
+👨‍💻 Sobre o Autor
 
-🔗 https://www.linkedin.com/in/daniel-victor-/
-📧 nevesdatascience@gmail.com
+Daniel Victor Simões Neves
 
+Estudante de Ciência de Dados | Focado em Prevenção a Fraudes, AML, e Machine Learning Com este projeto, Daniel mostra domínio prático em engenharia de dados, lógica de negócio antifraude e habilidades que se alinham diretamente às demandas de empresas que valorizam segurança, inteligência e experiência do cliente. 📧 LinkedIn - https://www.linkedin.com/in/daniel-victor-/ • GitHub: - https://github.com/DanielVictor-Dev
 

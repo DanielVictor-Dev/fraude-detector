@@ -189,5 +189,11 @@ Este projeto é de código aberto para fins educacionais e demonstração. Sinta
 
 Daniel Victor Simões Neves
 
-Estudante de Ciência de Dados | Focado em Prevenção a Fraudes, AML, e Machine Learning Com este projeto, Daniel mostra domínio prático em engenharia de dados, lógica de negócio antifraude e habilidades que se alinham diretamente às demandas de empresas que valorizam segurança, inteligência e experiência do cliente. 📧 LinkedIn - https://www.linkedin.com/in/daniel-victor-/ • GitHub: - https://github.com/DanielVictor-Dev
+Estudante de Ciência de Dados | Focado em Prevenção a Fraudes, AML, e Machine Learning Com este projeto, Daniel mostra domínio prático em engenharia de dados, lógica de negócio antifraude e habilidades que se alinham diretamente às demandas de empresas que valorizam segurança, inteligência e experiência do cliente. 
+
+• 📧 LinkedIn - https://www.linkedin.com/in/daniel-victor-/ 
+
+• GitHub: - https://github.com/DanielVictor-Dev
+
+
 

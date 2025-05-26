@@ -1,6 +1,7 @@
 🛡️ Sistema Inteligente de Detecção de Fraudes Bancárias
 
 🚀 Descrição do Projeto
+
 Este projeto simula um sistema de detecção de fraudes bancárias utilizando técnicas de Machine Learning, com foco em análise de comportamento, engenharia de atributos e construção de modelos preditivos. O pipeline é inspirado em práticas reais de prevenção a fraudes no setor bancário.
 
 O objetivo é identificar transações suspeitas com alto grau de precisão, minimizando falsos positivos e otimizando os processos de análise de risco.

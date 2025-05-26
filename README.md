@@ -13,18 +13,25 @@ Problema: Prevenção e detecção de fraudes em transações digitais
 
 Solução: Implementação de um pipeline completo de dados com machine learning supervisionado, interpretabilidade de modelo e simulação de API para tomada de decisão em tempo real.
 
+
 🔧 Funcionalidades
+
 🔹 Geração de um dataset sintético realista simulando operações bancárias
+
 🔹 Pipeline de pré-processamento com engenharia de atributos
+
 🔹 Modelagem preditiva utilizando XGBoost Classifier
+
 🔹 Avaliação dos modelos com métricas robustas
+
 🔹 Interpretação do modelo com SHAP (Explainable AI)
+
 🔹 Simulação de uma API para classificação de novas transações em tempo real
 
+
 📁 Estrutura do Projeto
-bash
-Copiar
-Editar
+
+
 📦 detecao-fraudes-bancarias
 ├── data/                # Dados brutos e processados
 │   └── dados_brutos.csv
@@ -36,19 +43,30 @@ Editar
 │   └── pipeline_modelagem.py
 ├── README.md            # Documentação do projeto
 └── requirements.txt     # Dependências do projeto
+
 📊 Dados Simulados
 Número de transações: 10.000
 
 Campos principais:
+
 usuario_id
+
 idade
+
 renda_mensal
+
 valor_transacao
+
 canal (app, web, atm)
+
 tipo_dispositivo (android, ios, desktop)
+
 hora_transacao
+
 pais
+
 localizacao_ip_diferente
+
 fraude (target)
 
 🛠️ Tecnologias e Ferramentas

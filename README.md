@@ -50,15 +50,15 @@ Número de transações: 10.000
 Campos principais:
 
 usuario_id
-idade
-renda_mensal
-valor_transacao
-canal (app, web, atm)
-tipo_dispositivo (android, ios, desktop)
-hora_transacao
-pais
-localizacao_ip_diferente
-fraude (target)
+- idade
+- renda_mensal
+- valor_transacao
+- canal (app, web, atm)
+- tipo_dispositivo (android, ios, desktop)
+- hora_transacao
+- pais
+- localizacao_ip_diferente
+- fraude (target)
 
 🛠️ Tecnologias e Ferramentas
 🐍 Python

@@ -1,0 +1,16 @@
+# Dados
+data/raw/
+data/processed/
+
+# Modelos
+models/
+
+# Outputs
+outputs/
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/
+
+# Cache Python
+__pycache__/
+*.pyc

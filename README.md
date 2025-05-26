@@ -90,7 +90,9 @@ o	Probabilidade de fraude.
 ________________________________________
 🧠 Principais Insights Técnicos
 •	Transações com valor muito alto, realizadas em horários suspeitos (madrugada) ou de localização IP diferente do habitual, aumentam significativamente a probabilidade de fraude.
+
 •	O pipeline de Machine Learning permite reaproveitar a lógica de transformação tanto no treinamento quanto em produção (API).
+
 •	A interpretação com SHAP garante transparência nas decisões do modelo, fundamental em sistemas antifraude para instituições financeiras.
 ________________________________________
 
@@ -102,11 +104,11 @@ ________________________________________
 
 •	Atingiu métricas robustas de avaliação:
 
-o	AUC-ROC superior a 0,95, garantindo excelente capacidade de distinguir transações legítimas de fraudulentas.
+     o	AUC-ROC superior a 0,95, garantindo excelente capacidade de distinguir transações legítimas de fraudulentas.
 
-o	Recall elevado (acima de 92%), priorizando a captura de fraudes — métrica essencial para cenários críticos de risco.
+     o	Recall elevado (acima de 92%), priorizando a captura de fraudes — métrica essencial para cenários críticos de risco.
 
-o	Trade-off otimizado entre precisão e recall, controlando o impacto de falsos positivos e falsos negativos, alinhado com as boas práticas de Prevenção a Fraudes.
+     o	Trade-off otimizado entre precisão e recall, controlando o impacto de falsos positivos e falsos negativos, alinhado com as boas práticas de Prevenção a Fraudes.
 
 🔍 Interpretação Clara dos Principais Fatores de Risco
 
@@ -114,13 +116,13 @@ o	Trade-off otimizado entre precisão e recall, controlando o impacto de falsos 
 
 •	Identificação dos principais padrões associados a comportamento fraudulento, como:
 
-o	Transações com valores anômalos fora do perfil médio do cliente.
+    o	Transações com valores anômalos fora do perfil médio do cliente.
 
-o	Alta frequência de transações em curto espaço de tempo.
+    o	Alta frequência de transações em curto espaço de tempo.
 
-o	Alterações recentes em dados cadastrais (indicador relevante para golpes como SIM Swap e roubo de identidade).
+    o	Alterações recentes em dados cadastrais (indicador relevante para golpes como SIM Swap e roubo de identidade).
 
-o	Origem e destino de PIX com histórico suspeito.
+    o	Origem e destino de PIX com histórico suspeito.
 
 •	Geração de dashboards com visualização dos principais fatores de risco, permitindo que equipes de prevenção e compliance tomem decisões informadas, rápidas e eficientes.
 

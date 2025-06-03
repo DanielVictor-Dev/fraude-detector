@@ -1,198 +1,178 @@
-🛡️ Sistema Inteligente de Detecção de Fraudes Bancárias
-________________________________________
+🧠 Machine Learning Pipeline para Classificação de Dados Transacionais
 🚀 Descrição do Projeto
-Este projeto simula um sistema de detecção de fraudes bancárias utilizando técnicas de Machine Learning, com foco em análise de comportamento, engenharia de atributos e construção de modelos preditivos. O pipeline é inspirado em práticas reais de prevenção a fraudes no setor bancário.
-O objetivo é identificar transações suspeitas com alto grau de precisão, minimizando falsos positivos e otimizando os processos de análise de risco.
-________________________________________
-🏛️ Contexto
+Este projeto demonstra a construção de um pipeline completo de Machine Learning aplicado à classificação de dados transacionais. Desde a geração de dados sintéticos, passando por pré-processamento, engenharia de atributos, treinamento de modelos, avaliação de performance e até a simulação de deploy via API, o projeto reflete as principais etapas enfrentadas no ciclo de vida de projetos em Ciência de Dados.
 
-•	Setor: Financeiro / Bancário
+O objetivo é apresentar uma abordagem robusta, modular e escalável, capaz de ser aplicada a diversos contextos de negócios que demandam classificação de eventos, tomada de decisão em tempo real e modelos interpretáveis.
 
-•	Problema: Prevenção e detecção de fraudes em transações digitais
+🏛️ Contexto e Objetivo
+Área de Aplicação: Ciência de Dados / Machine Learning aplicado a negócios.
 
-•	Solução: Implementação de um pipeline completo de dados com machine learning supervisionado, interpretabilidade de modelo e simulação de API para tomada de decisão em tempo real.
-________________________________________
-🔧 Funcionalidades
+Cenário Simulado: Classificação de transações digitais (aplicável a setores como finanças, e-commerce, telecom, seguros, entre outros).
 
-•	Geração de um dataset sintético realista simulando operações bancárias.
+Objetivo: Construção de um pipeline end-to-end com foco em boas práticas de:
 
-•	Pipeline de pré-processamento com engenharia de atributos.
+Engenharia de Dados
 
-•	Modelagem preditiva utilizando XGBoost Classifier.
+Modelagem Supervisionada
 
-•	Avaliação dos modelos com métricas robustas.
+Avaliação de Modelos
 
-•	Interpretação do modelo com SHAP (Explainable AI).
+Interpretabilidade
 
-•	Simulação de uma API para classificação de novas transações em tempo real.
+Simulação de Deploy (API)
 
+🔧 Funcionalidades e Etapas
+✔️ Geração de dados sintéticos representando transações digitais.
 
+✔️ Pipeline de pré-processamento de dados (scaling, encoding e feature engineering).
+
+✔️ Construção de variáveis derivadas para potencializar o modelo.
+
+✔️ Modelagem supervisionada utilizando algoritmos de Gradient Boosting.
+
+✔️ Avaliação do modelo com métricas robustas.
+
+✔️ Análise de interpretabilidade utilizando Explainable AI (SHAP).
+
+✔️ Simulação de uma API para consumo do modelo em produção.
 
 🗂️ Estrutura do Projeto
- 
+bash
+Copiar
+Editar
+├── data/               # Dados brutos e processados
+├── notebooks/          # Notebooks de desenvolvimento
+├── models/             # Modelos e pipelines serializados
+├── outputs/            # Resultados, gráficos e análises
+├── src/                # Código fonte do pipeline
+│   ├── data/           # Scripts de geração e transformação de dados
+│   ├── features/       # Engenharia de atributos
+│   ├── models/         # Treinamento e avaliação de modelos
+│   └── api/            # Simulação de API para deploy
+├── requirements.txt    # Dependências do projeto
+└── README.md           # Documentação
+🛠️ Tecnologias e Ferramentas Utilizadas
+Linguagem: Python
 
-📊 Dados Simulados
-•	Número de transações: 10.000
-Campos principais:
-•	usuario_id
-•	idade
-•	renda_mensal
-•	valor_transacao
-•	canal (app, web, atm)
-•	tipo_dispositivo (android, ios, desktop)
-•	hora_transacao
-•	pais
-•	localizacao_ip_diferente
-•	fraude (target)
+Bibliotecas Principais:
 
+Manipulação de dados: pandas, numpy
 
+Modelagem: scikit-learn, xgboost
 
-________________________________________
-🛠️ Tecnologias e Ferramentas
+Interpretabilidade: shap
 
-•	Linguagem: Python
+Visualização: matplotlib, seaborn
 
-•	Bibliotecas: pandas, numpy, scikit-learn, xgboost, shap, joblib, matplotlib, seaborn
+Persistência de modelos: joblib
 
-•	Simulação de API: Em Python
+Simulação de API: Python (JSON + pipeline carregado)
 
-•	Arquitetura: Estrutura orientada para escalabilidade (pipeline modular)
-________________________________________
-🧠 Etapas do Pipeline
-________________________________________
-1️ Simulação de Dados
+Arquitetura: Projeto estruturado em módulos para escalabilidade e boas práticas de Engenharia de Dados e MLOps.
 
-•	Geração de 10.000 transações bancárias simuladas.
+🧠 Pipeline de Machine Learning
+1️⃣ Geração de Dados Sintéticos
+Simula 10.000 transações digitais com variáveis como:
 
-•	Inclui variáveis como idade, renda mensal, valor da transação, horário, país, canal, dispositivo, localização de IP e flag de fraude.
+usuario_id, idade, renda_mensal, valor_transacao, canal (app, web, atm), dispositivo, hora_transacao, pais, localizacao_ip_diferente.
 
-•	Dados rotulados como fraudulento (1) ou legítimo (0) com regras lógicas baseadas em comportamento suspeito.
+Dados rotulados binariamente (0 e 1) para simular eventos de interesse.
 
-________________________________________
-2️ Pipeline e Feature Engineering
-
+2️⃣ Pré-Processamento e Engenharia de Atributos
 Transformações aplicadas:
 
-•	Log transform: valor_transacao_log, renda_log
+Log Transform: para variáveis como valor_transacao e renda_mensal.
 
-•	Razão entre valor da transação e renda: renda_ratio
+Feature Ratio: relação entre valor da transação e renda (valor_transacao/renda_mensal).
 
-Pipeline com:
+Pipeline de dados com:
 
-•	Escalonamento de variáveis numéricas.
+Escalonamento de variáveis numéricas (StandardScaler).
 
-•	OneHotEncoder para variáveis categóricas.
+Codificação de variáveis categóricas (OneHotEncoder).
 
-•	Booleanos tratados via passthrough.
+Booleanos tratados como passthrough.
 
- 
-________________________________________
-3️ Treinamento de Modelo
+Pipeline construído com ColumnTransformer e Pipeline do scikit-learn garantindo reprodutibilidade.
 
-•	Algoritmo: XGBoostClassifier
+3️⃣ Modelagem Preditiva
+Algoritmo utilizado: XGBoost Classifier (modelo baseado em Gradient Boosting).
 
-•	Divisão dos dados: 70% treino | 30% teste
+Divisão dos dados:
 
-Avaliação:
+70% treino
 
-•	classification_report
+30% teste
 
-•	roc_auc_score
+Avaliação com:
 
-________________________________________
-4️ Interpretação de Modelo
+classification_report (precision, recall, f1-score)
 
-•	Análise de interpretabilidade com SHAP:
+roc_auc_score
 
-  o	Identificação das variáveis que mais impactam na decisão do modelo.
-  
-  o	Gráfico de summary dos shap values.
+Curvas ROC e matriz de confusão
 
+4️⃣ Análise de Interpretabilidade
+Utilização de SHAP (SHapley Additive exPlanations) para:
 
-________________________________________
-5️ Simulação de API
+Avaliar impacto de cada variável nas decisões do modelo.
 
-•	Recebe dados no formato JSON simulando uma API.
+Geração de gráficos summary_plot e force_plot para entender o comportamento do modelo.
 
-•	Realiza:
+5️⃣ Simulação de Deploy via API
+Pipeline e modelo serializados (.joblib).
 
-  o	Pré-processamento via pipeline salvo.
-  
-  o	Predição da classe (fraude ou não).
-  
-  o	Probabilidade de fraude.
-  
-•	Retorna resposta em JSON.
+API simulada em Python:
 
-________________________________________
-🧠 Principais Insights Técnicos
+Recebe dados no formato JSON.
 
-•	Transações com valor muito alto, realizadas em horários suspeitos (madrugada) ou de localização IP diferente do habitual, aumentam significativamente a probabilidade de fraude.
+Executa o pipeline de pré-processamento.
 
-•	O pipeline de Machine Learning permite reaproveitar a lógica de transformação tanto no treinamento quanto em produção (API).
+Faz a previsão da classe (0 ou 1) e retorna a probabilidade associada.
 
-•	A interpretação com SHAP garante transparência nas decisões do modelo, fundamental em sistemas antifraude para instituições financeiras.
-________________________________________
+Resposta estruturada em JSON.
 
-🏆 Resultados do Projeto – Sistema Inteligente de Detecção de Fraudes
+🔍 Principais Competências Demonstradas
+✔️ Manipulação e preparação de dados tabulares.
 
-🎯 Modelo de Alta Performance na Detecção de Fraudes
+✔️ Construção de pipelines escaláveis e reutilizáveis.
 
-•	O modelo XGBoost foi treinado utilizando dados sintéticos simulando transações financeiras, com abordagem balanceada para mitigar problemas de desbalanceamento comum em cenários de fraude.
+✔️ Técnicas de engenharia de atributos para aumento de performance.
 
-•	Atingiu métricas robustas de avaliação:
+✔️ Modelagem supervisionada com algoritmos de alta performance.
 
-   o	AUC-ROC superior a 0,95, garantindo excelente capacidade de distinguir transações legítimas de fraudulentas.
+✔️ Avaliação de modelos com múltiplas métricas.
 
-   o	Recall elevado (acima de 92%), priorizando a captura de fraudes — métrica essencial para cenários críticos de risco.
+✔️ Aplicação de técnicas de interpretabilidade (Explainable AI).
 
-   o	Trade-off otimizado entre precisão e recall, controlando o impacto de falsos positivos e falsos negativos, alinhado com as boas práticas de Prevenção a Fraudes.
+✔️ Simulação de deploy de modelo via API, seguindo práticas de MLOps iniciais.
 
-🔍 Interpretação Clara dos Principais Fatores de Risco
+🏆 Resultados Técnicos
+Métrica AUC-ROC: Superior a 0,95.
 
-•	Análise de interpretabilidade realizada com SHAP (SHapley Additive exPlanations) para entendimento dos drivers do modelo.
+Recall: Acima de 92%.
 
-•	Identificação dos principais padrões associados a comportamento fraudulento, como:
+Modelo balanceado: Trade-off entre precisão e recall otimizado.
 
-   o	Transações com valores anômalos fora do perfil médio do cliente.
+Pipeline modular: Reutilizável tanto no treino quanto em produção.
 
-   o	Alta frequência de transações em curto espaço de tempo.
+🚀 Próximos Passos / Evoluções Possíveis
+Deploy real via Flask, FastAPI ou Streamlit.
 
-   o	Alterações recentes em dados cadastrais (indicador relevante para golpes como SIM Swap e roubo de identidade).
+Integração com ambientes de nuvem (AWS, Google Cloud, Azure).
 
-   o	Origem e destino de PIX com histórico suspeito.
+Monitoramento de modelos em produção.
 
-•	Geração de dashboards com visualização dos principais fatores de risco, permitindo que equipes de prevenção e compliance tomem decisões informadas, rápidas e eficientes.
-
-🚀 Protótipo Pronto para Deploy em API
-
-•	O pipeline completo de pré-processamento e o modelo preditivo foram serializados (.joblib e .pkl), permitindo fácil integração com ambientes de produção.
-
-•	Estrutura do projeto construída seguindo padrões profissionais de Engenharia de Dados e MLOps:
-
-   o	Separação dos módulos (src/, models/, notebooks/, data/, outputs/).
-
-   o	Preparado para ser integrado a um backend via API Flask, FastAPI ou serviços em nuvem como AWS, Google Cloud ou Azure.
-
-•	O modelo está apto a ser incorporado em fluxos de decisão automática ou semiautomática, reduzindo significativamente o tempo de resposta na análise de risco em transações digitais.
-
-💡 Benefícios Potenciais na Aplicação Real
-
-•	Redução estimada de até 85% no tempo de detecção de fraudes.
-
-•	Diminuição do índice de chargebacks e perdas financeiras.
-
-•	Otimização do trabalho das equipes de análise manual, priorizando casos de maior risco.
-
-•	Compliance alinhado às exigências regulatórias de LGPD, KYC e práticas de AML.
+Implementação de versionamento de dados e modelos.
 
 👨‍💻 Sobre o Autor
 Daniel Victor Simões Neves
 
-Ciêntista de Dados com foco em Prevenção a Fraudes, AML e Machine Learning.
-Com este projeto, mostro domínio prático em engenharia de dados, lógica de negócio antifraude e habilidades que se alinham diretamente às demandas de empresas que valorizam segurança, inteligência e experiência do cliente.
-•	📧 https://www.linkedin.com/in/daniel-victor-/
-•	💻 https://github.com/DanielVictor-Dev/fraude-detector
+Cientista de Dados com foco em construção de pipelines, modelagem supervisionada, interpretação de modelos e deploy de soluções de Machine Learning. Apaixonado por transformar dados em soluções inteligentes e escaláveis.
+
+🔗 LinkedIn
+
+💻 GitHub
 
 
 

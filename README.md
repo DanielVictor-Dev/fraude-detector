@@ -1,4 +1,5 @@
 🧠 Machine Learning Pipeline para Classificação de Dados Transacionais
+
 🚀 Descrição do Projeto
 Este projeto demonstra a construção de um pipeline completo de Machine Learning aplicado à classificação de dados transacionais. Desde a geração de dados sintéticos, passando por pré-processamento, engenharia de atributos, treinamento de modelos, avaliação de performance e até a simulação de deploy via API, o projeto reflete as principais etapas enfrentadas no ciclo de vida de projetos em Ciência de Dados.
 
@@ -71,6 +72,7 @@ Simulação de API: Python (JSON + pipeline carregado)
 Arquitetura: Projeto estruturado em módulos para escalabilidade e boas práticas de Engenharia de Dados e MLOps.
 
 🧠 Pipeline de Machine Learning
+
 1️⃣ Geração de Dados Sintéticos
 Simula 10.000 transações digitais com variáveis como:
 
